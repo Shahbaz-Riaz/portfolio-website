@@ -1,9 +1,6 @@
-
 import { ArrowDown } from "lucide-react";
-
 export function HeroSection() {
-  return (
-    <section id="home" className="relative min-h-screen flex items-center pt-16">
+  return <section id="home" className="relative min-h-screen flex items-center pt-16">
       {/* Background gradient elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-1/4 w-2/3 h-2/3 rounded-full bg-purple-400/20 blur-3xl"></div>
@@ -13,7 +10,7 @@ export function HeroSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex flex-col items-center text-center animate-fade-in">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-            Hi, I'm <span className="gradient-text">John Doe</span>
+            Hi, I'm <span className="gradient-text">Muhammad Shahbaz</span>
           </h1>
           <p className="text-2xl md:text-3xl mb-8 text-foreground/80">
             Full Stack Web Developer
@@ -38,6 +35,5 @@ export function HeroSection() {
           <ArrowDown size={20} className="text-foreground/70" />
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }

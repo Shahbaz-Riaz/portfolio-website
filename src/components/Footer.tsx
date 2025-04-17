@@ -1,17 +1,11 @@
-
 import { Heart } from "lucide-react";
-
 export function Footer() {
   const currentYear = new Date().getFullYear();
-  
-  return (
-    <footer className="py-8 bg-secondary/50 border-t border-border">
+  return <footer className="py-8 bg-secondary/50 border-t border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-4 md:mb-0">
-            <a href="#" className="text-xl font-display font-bold gradient-text">
-              DevFolio
-            </a>
+            <a href="#" className="text-xl font-display font-bold gradient-text">PORTFOLIO</a>
             <p className="text-sm text-muted-foreground mt-1">
               Showcasing creativity and code.
             </p>
@@ -27,6 +21,5 @@ export function Footer() {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 }

@@ -1,9 +1,7 @@
-
 import { useState, useEffect } from "react";
 import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
-
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -16,17 +14,12 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  
-  return (
-    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/90 backdrop-blur-md shadow-sm" : "bg-transparent"}`}>
+  return <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${isScrolled ? "bg-background/90 backdrop-blur-md shadow-sm" : "bg-transparent"}`}>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center">
-            <a href="#" className="text-xl md:text-2xl font-display font-bold gradient-text">
-              DevFolio
-            </a>
+            <a href="#" className="text-xl md:text-2xl font-display font-bold gradient-text">PORTFOLIO</a>
           </div>
           
           {/* Desktop Navigation */}
@@ -42,12 +35,7 @@ export function Navbar() {
           {/* Mobile Menu Button */}
           <div className="md:hidden flex items-center gap-2">
             <ThemeToggle />
-            <Button 
-              variant="ghost" 
-              size="icon" 
-              className="md:hidden"
-              onClick={toggleMenu}
-            >
+            <Button variant="ghost" size="icon" className="md:hidden" onClick={toggleMenu}>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </Button>
           </div>
@@ -55,8 +43,7 @@ export function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      {isMenuOpen && (
-        <div className="md:hidden bg-background/95 backdrop-blur-md shadow-md">
+      {isMenuOpen && <div className="md:hidden bg-background/95 backdrop-blur-md shadow-md">
           <nav className="flex flex-col space-y-4 px-4 py-6">
             <a href="#home" className="text-lg font-medium" onClick={toggleMenu}>Home</a>
             <a href="#about" className="text-lg font-medium" onClick={toggleMenu}>About</a>
@@ -64,8 +51,6 @@ export function Navbar() {
             <a href="#projects" className="text-lg font-medium" onClick={toggleMenu}>Projects</a>
             <a href="#contact" className="text-lg font-medium" onClick={toggleMenu}>Contact</a>
           </nav>
-        </div>
-      )}
-    </header>
-  );
+        </div>}
+    </header>;
 }

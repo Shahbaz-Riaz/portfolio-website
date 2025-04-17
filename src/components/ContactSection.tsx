@@ -1,12 +1,9 @@
-
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
-
 export function ContactSection() {
-  return (
-    <section id="contact" className="section">
+  return <section id="contact" className="section">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
@@ -30,9 +27,7 @@ export function ContactSection() {
                     <Mail className="mr-4 w-6 h-6" />
                     <div>
                       <p className="font-medium">Email</p>
-                      <a href="mailto:john@example.com" className="hover:underline">
-                        john@example.com
-                      </a>
+                      <a href="mailto:john@example.com" className="hover:underline">muhammad.shahbazt20@gmail.com</a>
                     </div>
                   </div>
                   
@@ -40,9 +35,7 @@ export function ContactSection() {
                     <Phone className="mr-4 w-6 h-6" />
                     <div>
                       <p className="font-medium">Phone</p>
-                      <a href="tel:+1234567890" className="hover:underline">
-                        (123) 456-7890
-                      </a>
+                      <a href="tel:+1234567890" className="hover:underline">+92 3128807079</a>
                     </div>
                   </div>
                   
@@ -50,7 +43,7 @@ export function ContactSection() {
                     <MapPin className="mr-4 w-6 h-6" />
                     <div>
                       <p className="font-medium">Location</p>
-                      <p>San Francisco, California</p>
+                      <p>Karachi, Pakistan</p>
                     </div>
                   </div>
                 </div>
@@ -91,24 +84,13 @@ export function ContactSection() {
                       <label htmlFor="name" className="text-sm font-medium">
                         Name
                       </label>
-                      <Input 
-                        id="name" 
-                        placeholder="Your name"
-                        required
-                        className="dark:bg-gray-800/50 dark:border-gray-700"
-                      />
+                      <Input id="name" placeholder="Your name" required className="dark:bg-gray-800/50 dark:border-gray-700" />
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="email" className="text-sm font-medium">
                         Email
                       </label>
-                      <Input 
-                        id="email" 
-                        type="email" 
-                        placeholder="Your email"
-                        required
-                        className="dark:bg-gray-800/50 dark:border-gray-700"
-                      />
+                      <Input id="email" type="email" placeholder="Your email" required className="dark:bg-gray-800/50 dark:border-gray-700" />
                     </div>
                   </div>
                   
@@ -116,25 +98,14 @@ export function ContactSection() {
                     <label htmlFor="subject" className="text-sm font-medium">
                       Subject
                     </label>
-                    <Input 
-                      id="subject" 
-                      placeholder="Subject of your message"
-                      required
-                      className="dark:bg-gray-800/50 dark:border-gray-700"
-                    />
+                    <Input id="subject" placeholder="Subject of your message" required className="dark:bg-gray-800/50 dark:border-gray-700" />
                   </div>
                   
                   <div className="space-y-2">
                     <label htmlFor="message" className="text-sm font-medium">
                       Message
                     </label>
-                    <Textarea 
-                      id="message" 
-                      placeholder="Your message"
-                      rows={5}
-                      required
-                      className="dark:bg-gray-800/50 dark:border-gray-700"
-                    />
+                    <Textarea id="message" placeholder="Your message" rows={5} required className="dark:bg-gray-800/50 dark:border-gray-700" />
                   </div>
                   
                   <Button type="submit" className="w-full btn-gradient">
@@ -147,6 +118,5 @@ export function ContactSection() {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 }
