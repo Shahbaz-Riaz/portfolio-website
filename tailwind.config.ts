@@ -130,8 +130,12 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'linear-gradient(135deg, #8B5CF6 0%, #6366F1 50%, #EC4899 100%)',
 				'gradient-secondary': 'linear-gradient(90deg, #8B5CF6 0%, #3B82F6 100%)',
-				'gradient-accent': 'linear-gradient(90deg, #EC4899 0%, #8B5CF6 100%)'
-			}
+				'gradient-accent': 'linear-gradient(90deg, #EC4899 0%, #8B5CF6 100%)',
+        'card-dark-gradient': 'linear-gradient(135deg, rgba(30,41,59,1) 0%, rgba(17,24,39,1) 100%)',
+			},
+      backgroundColor: {
+        'dark-card': 'rgba(30,41,59,0.7)'
+      }
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
