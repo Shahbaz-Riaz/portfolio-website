@@ -1,3 +1,4 @@
+
 import { Heart } from "lucide-react";
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -13,7 +14,7 @@ export function Footer() {
           
           <div className="flex flex-col items-center md:items-end">
             <div className="flex items-center text-sm text-muted-foreground">
-              <span>© {currentYear} John Doe. All rights reserved.</span>
+              <span>© {currentYear} Muhammad Shahbaz. All rights reserved.</span>
             </div>
             <p className="text-sm text-muted-foreground mt-1 flex items-center">
               Made with <Heart className="h-3 w-3 mx-1 text-pink-500" /> and React

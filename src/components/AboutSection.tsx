@@ -15,7 +15,7 @@ export function AboutSection() {
             <div className="animate-fade-in order-2 md:order-1">
               <div className="prose prose-lg max-w-none">
                 <p className="mb-4">
-                  Hello! I'm John, a passionate web developer with a love for creating 
+                  Hello! I'm Muhammad Shahbaz, a passionate web developer with a love for creating 
                   innovative and user-friendly digital experiences. 
                 </p>
                 <p className="mb-6">
