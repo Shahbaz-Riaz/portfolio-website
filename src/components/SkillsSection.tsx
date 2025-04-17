@@ -52,7 +52,7 @@ export function SkillsSection() {
             {skills.map((skill, index) => (
               <div 
                 key={skill.category}
-                className="bg-white border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300"
+                className="bg-white dark:bg-card-dark-gradient dark:border-gray-800 dark:backdrop-blur-lg border border-border rounded-lg p-6 shadow-sm hover:shadow-md transition-all duration-300"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="flex items-center mb-4">
@@ -65,7 +65,7 @@ export function SkillsSection() {
                   {skill.technologies.map((tech) => (
                     <span 
                       key={tech} 
-                      className="px-3 py-1 text-sm bg-secondary rounded-full"
+                      className="px-3 py-1 text-sm bg-secondary dark:bg-gray-700/50 dark:text-gray-200 rounded-full"
                     >
                       {tech}
                     </span>

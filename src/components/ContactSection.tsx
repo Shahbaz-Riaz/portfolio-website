@@ -17,7 +17,7 @@ export function ContactSection() {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-white rounded-lg shadow-lg overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 bg-white dark:bg-card-dark-gradient dark:border-gray-800 dark:backdrop-blur-lg rounded-lg shadow-lg overflow-hidden">
             <div className="bg-gradient-primary text-white p-8 flex flex-col justify-between">
               <div>
                 <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
@@ -83,7 +83,7 @@ export function ContactSection() {
               </div>
             </div>
             
-            <div className="p-8">
+            <div className="p-8 dark:bg-transparent">
               <form>
                 <div className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -95,6 +95,7 @@ export function ContactSection() {
                         id="name" 
                         placeholder="Your name"
                         required
+                        className="dark:bg-gray-800/50 dark:border-gray-700"
                       />
                     </div>
                     <div className="space-y-2">
@@ -106,6 +107,7 @@ export function ContactSection() {
                         type="email" 
                         placeholder="Your email"
                         required
+                        className="dark:bg-gray-800/50 dark:border-gray-700"
                       />
                     </div>
                   </div>
@@ -118,6 +120,7 @@ export function ContactSection() {
                       id="subject" 
                       placeholder="Subject of your message"
                       required
+                      className="dark:bg-gray-800/50 dark:border-gray-700"
                     />
                   </div>
                   
@@ -130,6 +133,7 @@ export function ContactSection() {
                       placeholder="Your message"
                       rows={5}
                       required
+                      className="dark:bg-gray-800/50 dark:border-gray-700"
                     />
                   </div>
                   
