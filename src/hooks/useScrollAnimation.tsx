@@ -1,4 +1,3 @@
-
 import { useEffect, useRef } from 'react';
 
 export function useScrollAnimation() {
@@ -10,6 +9,7 @@ export function useScrollAnimation() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('animate-fade-in');
+            entry.target.style.opacity = '1';
             observer.unobserve(entry.target);
           }
         });
@@ -21,11 +21,18 @@ export function useScrollAnimation() {
     );
 
     if (elementRef.current) {
+      // Only set opacity to 0 initially, but keep visibility visible
       elementRef.current.style.opacity = '0';
+      // Add a transition to make the fade smoother
+      elementRef.current.style.transition = 'opacity 0.5s ease-out';
       observer.observe(elementRef.current);
     }
 
-    return () => observer.disconnect();
+    return () => {
+      if (observer) {
+        observer.disconnect();
+      }
+    };
   }, []);
 
   return elementRef;
