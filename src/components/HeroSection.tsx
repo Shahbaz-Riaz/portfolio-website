@@ -31,31 +31,7 @@ export function HeroSection() {
           </div>
         </div>
       </div>
-      
-      {/* Responsive Scroll down indicator */}
-      <div
-        className="
-          fixed
-          left-1/2
-          -translate-x-1/2
-          bottom-4
-          sm:bottom-8
-          z-40
-          animate-bounce
-          flex flex-col items-center
-          pointer-events-none
-        "
-        style={{
-          width: 'fit-content'
-        }}
-      >
-        <span className="text-xs sm:text-sm mb-1 sm:mb-2 text-foreground/70 bg-background/70 px-2 py-0.5 rounded-lg shadow-md backdrop-blur-md">
-          Scroll Down
-        </span>
-        <span className="bg-background/70 rounded-full p-1 shadow-md backdrop-blur-md">
-          <ArrowDown size={20} className="text-foreground/70" />
-        </span>
-      </div>
     </section>
   );
 }
+
