@@ -1,6 +1,8 @@
+
 import { ArrowDown } from "lucide-react";
 export function HeroSection() {
-  return <section id="home" className="relative min-h-screen flex items-center pt-16">
+  return (
+    <section id="home" className="relative min-h-screen flex items-center pt-16">
       {/* Background gradient elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 -left-1/4 w-2/3 h-2/3 rounded-full bg-purple-400/20 blur-3xl"></div>
@@ -28,12 +30,32 @@ export function HeroSection() {
             </a>
           </div>
         </div>
-        
-        {/* Scroll down indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-          <span className="text-sm mb-2 text-foreground/70">Scroll Down</span>
-          <ArrowDown size={20} className="text-foreground/70" />
-        </div>
       </div>
-    </section>;
+      
+      {/* Responsive Scroll down indicator */}
+      <div
+        className="
+          fixed
+          left-1/2
+          -translate-x-1/2
+          bottom-4
+          sm:bottom-8
+          z-40
+          animate-bounce
+          flex flex-col items-center
+          pointer-events-none
+        "
+        style={{
+          width: 'fit-content'
+        }}
+      >
+        <span className="text-xs sm:text-sm mb-1 sm:mb-2 text-foreground/70 bg-background/70 px-2 py-0.5 rounded-lg shadow-md backdrop-blur-md">
+          Scroll Down
+        </span>
+        <span className="bg-background/70 rounded-full p-1 shadow-md backdrop-blur-md">
+          <ArrowDown size={20} className="text-foreground/70" />
+        </span>
+      </div>
+    </section>
+  );
 }
