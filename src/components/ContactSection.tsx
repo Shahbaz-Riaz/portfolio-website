@@ -1,3 +1,4 @@
+
 import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -123,5 +124,6 @@ export function ContactSection() {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 }
