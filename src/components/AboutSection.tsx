@@ -1,9 +1,11 @@
-
 import { GraduationCap, Briefcase, User } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 export function AboutSection() {
+  const sectionRef = useScrollAnimation();
+  
   return (
-    <section id="about" className="section bg-secondary/30">
+    <section ref={sectionRef} id="about" className="section bg-secondary/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">

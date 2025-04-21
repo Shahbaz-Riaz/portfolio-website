@@ -2,8 +2,13 @@ import { Mail, Phone, MapPin, Send } from "lucide-react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+
 export function ContactSection() {
-  return <section id="contact" className="section">
+  const sectionRef = useScrollAnimation();
+  
+  return (
+    <section ref={sectionRef} id="contact" className="section">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">

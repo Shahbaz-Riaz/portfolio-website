@@ -1,5 +1,5 @@
-
 import { Code, Server, Palette, Database, Figma, GitBranch } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const skills = [
   {
@@ -35,8 +35,10 @@ const skills = [
 ];
 
 export function SkillsSection() {
+  const sectionRef = useScrollAnimation();
+  
   return (
-    <section id="skills" className="section">
+    <section ref={sectionRef} id="skills" className="section">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">

@@ -1,6 +1,6 @@
-
 import { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 // Project data
 const projects = [
@@ -68,13 +68,14 @@ const projects = [
 
 export function ProjectsSection() {
   const [category, setCategory] = useState("all");
+  const sectionRef = useScrollAnimation();
   
   const filteredProjects = category === "all" 
     ? projects 
     : projects.filter(project => project.category === category);
   
   return (
-    <section id="projects" className="section bg-secondary/30 dark:bg-gray-900/30">
+    <section ref={sectionRef} id="projects" className="section bg-secondary/30 dark:bg-gray-900/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
